@@ -100,10 +100,6 @@ p {
 	border-color: #1085c7;
 }
 
-form p {
-	margin-bottom: 10px;
-}
-
 p.flash {
 	border-style: solid;
 	border-width: 3px;
@@ -154,4 +150,14 @@ hr {
 	margin-bottom: 17px;
 	border: 0;
 	border-bottom: 1px solid #ddd;
+}
+
+/* form */
+
+form p {
+	margin-bottom: 10px;
+}
+
+form label {
+  display: block;
 }
