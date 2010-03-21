@@ -2,21 +2,15 @@ require 'spec_helper'
 
 describe LoanApplication do
   before(:each) do
-    @valid_attributes = {
-      :full_name => 'John Doe',
-      :amount => '500',
-      :email => 'john@doe.com',
-      :phone => '425.444.4444'
-    }
+    @app = Factory.create(:loan_application)
   end
 
   it "should create a new instance given valid attributes" do
-    LoanApplication.create!(@valid_attributes)
+    @app.should be_valid
   end
   
   describe "#signer" do
     before(:each) do
-      @app = LoanApplication.create(@valid_attributes)
       @signer = @app.signer
     end
     
@@ -67,7 +61,6 @@ describe LoanApplication do
   
   describe "#document" do
     before(:each) do
-      @app = LoanApplication.create(@valid_attributes)
       @document = @app.document
     end
     
@@ -94,7 +87,6 @@ describe LoanApplication do
   
   describe "#envelope" do
     before(:each) do
-      @app = LoanApplication.create(@valid_attributes)
       @envelope = @app.envelope
     end
     
@@ -117,7 +109,6 @@ describe LoanApplication do
   
   describe "#initials" do
     it "should return the applicant's initials" do
-      @app = LoanApplication.new(@valid_attributes)
       @app.initials.should == 'JD'
     end
   end

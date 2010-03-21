@@ -9,4 +9,8 @@ describe LoanApplicationsController do
       response.should render_template('new')
     end
   end
+  
+  describe "#create" do
+    
+  end
 end
