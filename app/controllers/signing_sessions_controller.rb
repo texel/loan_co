@@ -1,0 +1,2 @@
+class SigningSessionsController < ApplicationController
+end
