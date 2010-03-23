@@ -3,3 +3,4 @@ db/*.sqlite3
 config/docusign.yml
 Capfile
 config/deploy.rb
+.bundle
