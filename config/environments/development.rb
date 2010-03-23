@@ -23,7 +23,3 @@ if File.exists?(File.join(RAILS_ROOT, 'tmp', 'debug.txt'))
   Debugger.start_remote
   File.delete(File.join(RAILS_ROOT, 'tmp', 'debug.txt'))
 end
-
-log = File.open('log/development.log', 'a')
-$stdout.reopen(log)
-$stderr.reopen(log)

@@ -142,8 +142,6 @@ td {
 	font-size: 1.2em;
 }
 
-
-
 hr {
 	clear: both;
 	height: 1px;
@@ -152,10 +150,24 @@ hr {
 	border-bottom: 1px solid #ddd;
 }
 
+.separator {
+  padding-top: 10px;
+  border-top: 1px solid #909090;
+}
+
 /* form */
+
+form ol {
+  list-style: none;
+  margin-bottom: 20px;
+}
 
 form p {
 	margin-bottom: 10px;
+}
+
+form li {
+  font-size: 1.2em;
 }
 
 form label {

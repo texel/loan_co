@@ -5,21 +5,19 @@ class LoanApplicationsController < ApplicationController
   
   def create
     @loan_application = LoanApplication.new(params[:loan_application])
-    if @loan_application.valid?
+    if @loan_application.save
       session[:loan_application_id] = @loan_application.id
       
-      response = LoanCo.connection.create_and_send_envelope :envelope => @loan_application.envelope
+      response        = LoanCo.connection.create_and_send_envelope :envelope => @loan_application.envelope
       envelope_status = response.create_and_send_envelope_result
       
       token = generate_token @loan_application.signer, envelope_status
       
-      debugger
-      
       response = LoanCo.connection.request_recipient_token token
       
-      logger.info(pp response)
-      
-      render :nothing => true
+      session[:signing_url] = response.request_recipient_token_result
+            
+      redirect_to new_signing_session_path
     else
       render 'new'
     end
