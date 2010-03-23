@@ -55,9 +55,12 @@ class LoanApplication < ActiveRecord::Base
   
   def envelope
     @envelope ||= Docusign::Envelope.new.tap do |e|
-      e.recipients = [signer]
-      e.documents  = [document]
-      e.tabs       = document.tabs
+      e.recipients  = [signer]
+      e.documents   = [document]
+      e.tabs        = document.tabs
+      e.subject     = 'Loan Application'
+      e.email_blurb = 'Sign the loan application to submit.'
+      e.account_id  = Docusign::Config[:account_id]
     end
   end
   

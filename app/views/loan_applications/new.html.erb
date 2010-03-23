@@ -1,28 +1,20 @@
 <h1>Loan Application</h1>
 
-<% form_for :loan_application do |f| %>
-  <p>
+<% form_for :loan_application, :url => loan_applications_path, :method => :post do |f| %>
+  <div>
     <%= f.label :full_name %>
     <%= f.text_field :full_name %>
-  </p>
   
-  <p>
     <%= f.label :email %>
     <%= f.text_field :email %>
-  </p>
 
-  <p>
     <%= f.label :phone %>
     <%= f.text_field :phone %>
-  </p>
 
-  <p>
     <%= f.label :amount %>
     <%= f.text_field :amount %>
-  </p>
   
-  <p>
     <%= f.submit "Apply" %> |
     <%= link_to "Cancel", root_url %>
-  </p>
+  </div>
 <% end %>
