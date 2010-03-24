@@ -16,9 +16,9 @@ describe SigningSessionsController do
         session[:signing_url] = 'http://foo.bar.baz'
       end
       
-      it "should render new" do
+      it "should redirect to the signing url" do
         get :new
-        response.should render_template('new')
+        response.should redirect_to(assigns(:signing_url))
       end
       
       it "should set @signing_url" do

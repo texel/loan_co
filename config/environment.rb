@@ -22,7 +22,7 @@ end
 # require 'rack' # a bundled gem
 
 # Alternatively, you can require all the bundled libs at once
-Bundler.require
+Bundler.require(:default)
 
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.

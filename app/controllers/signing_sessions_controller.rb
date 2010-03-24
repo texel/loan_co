@@ -2,6 +2,7 @@ class SigningSessionsController < ApplicationController
   before_filter :get_signing_url
   
   def new
+    redirect_to @signing_url
   end
   
   protected
