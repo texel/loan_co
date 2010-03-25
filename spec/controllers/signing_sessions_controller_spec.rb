@@ -27,4 +27,28 @@ describe SigningSessionsController do
       end
     end
   end
+  
+  describe "#show" do
+    context "with a valid status code" do
+      before(:each) do
+        get :show, :status => 'signing_complete'
+      end
+      
+      it "should set the @status_message" do
+        assigns(:status_message).should == SigningSessionsController::STATUS_MESSAGES[:signing_complete]
+      end
+      
+      it "should render show" do
+        response.should render_template('show')
+      end
+    end
+    
+    context "with no valid status code" do
+      it "should redirect to root" do
+        get :show, :status => 'bologna'
+        response.should redirect_to(root_path)
+      end
+    end
+
+  end
 end

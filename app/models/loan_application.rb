@@ -1,4 +1,5 @@
 class LoanApplication < ActiveRecord::Base
+  include ActionView::Helpers::NumberHelper
   PDF_PATH = Rails.root.join('public/docs/loan.pdf')
     
   validates_presence_of :amount, :full_name, :email, :phone
@@ -45,7 +46,7 @@ class LoanApplication < ActiveRecord::Base
         d.tab :name => 'email', :value => email,        :anchor => {:string => 'E-mail:', :x_offset => 200, :y_offset => -2}
         d.tab :name => 'phone', :value => phone,        :anchor => {:string => 'Phone:',  :x_offset => 200, :y_offset => -2}
         d.tab :type => Docusign::TabTypeCode::FullName, :anchor => {:string => 'Name:',   :x_offset => 200, :y_offset => -2}
-        d.tab :name => 'amount', :value => amount,      :anchor => {:string => 'Amount:', :x_offset => 200, :y_offset => -2}
+        d.tab :name => 'amount', :value => number_to_currency(amount),      :anchor => {:string => 'Amount:', :x_offset => 200, :y_offset => -2}
         d.tab :type => Docusign::TabTypeCode::SignHere, :anchor => {:string => 'X:',      :x_offset => 30,  :y_offset =>  8}
       end
     end

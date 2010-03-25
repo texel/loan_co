@@ -11,8 +11,9 @@ class LoanApplicationsController < ApplicationController
       response        = LoanCo.connection.create_and_send_envelope :envelope => @loan_application.envelope
       envelope_status = response.create_and_send_envelope_result
       
-      token = generate_token @loan_application.signer, envelope_status
+      session[:envelope_id] = envelope_status.envelope_id
       
+      token    = generate_token @loan_application.signer, envelope_status
       response = LoanCo.connection.request_recipient_token token
       
       session[:signing_url] = response.request_recipient_token_result
@@ -36,8 +37,8 @@ class LoanApplicationsController < ApplicationController
             
       # Set all the callback URLs in one fell swoop..
       t.client_urls = Docusign::RequestRecipientTokenClientURLs.new.tap do |u|
-        %w(access_code_failed cancel decline exception id_check_failed session_timeout signing_complete ttl_expired viewing_complete).each do |result|
-          u.send "on_#{result}=", "http://loanco.example.com?status=#{result}"
+        Docusign::RequestRecipientTokenClientURLs::CALLBACKS.each do |result|
+          u.send "on_#{result}=", signing_session_url(:status => result)
         end
       end
       

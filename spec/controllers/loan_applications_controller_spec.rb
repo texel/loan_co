@@ -49,6 +49,11 @@ describe LoanApplicationsController do
         session[:signing_url].should == 'http://docusign.url'
       end
       
+      it "should store the envelope_id in the session" do
+        post_create
+        session[:envelope_id].should == 1
+      end
+      
       it "should redirect to new_session" do
         post_create
         response.should redirect_to(new_signing_session_path)
