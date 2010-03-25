@@ -1,5 +1,7 @@
 <h1>Loan Application</h1>
 
+<%= error_messages_for :loan_application %>
+
 <% form_for :loan_application, :url => loan_applications_path, :method => :post do |f| %>
   <ol>
     <li>

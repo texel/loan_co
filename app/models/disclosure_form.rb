@@ -67,4 +67,8 @@ class DisclosureForm < ActiveRecord::Base
   def initials
     full_name.split(' ').map(&:first).map(&:upcase).join
   end
+  
+  def address_2
+    self[:address_2].blank? ? '&nbsp' : self[:address_2]
+  end
 end

@@ -1,0 +1,58 @@
+<h1>Disclosure Form</h1>
+
+<%= error_messages_for :disclosure_form %>
+
+<% form_for :disclosure_form, :url => disclosure_forms_path, :method => :post do |f| %>
+  <ol>
+    <li>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+    </li>
+    
+    <li>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </li>
+    
+    <li>
+      <%= f.label :address_1 %>
+      <%= f.text_field :address_1 %>
+    </li>
+    
+    <li>
+      <%= f.label :address_2 %>
+      <%= f.text_field :address_2 %>
+    </li>
+    
+    <li>
+      <%= f.label :city %>
+      <%= f.text_field :city %>
+    </li>
+    
+    <li>
+      <%= f.label :state %>
+      <%= f.text_field :state, :size => 2 %>
+    </li>
+    
+    <li>
+      <%= f.label :zip %>
+      <%= f.text_field :zip, :size => 10 %>
+    </li>
+    
+    <li>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </li>
+    
+    <li>
+      <%= f.label :phone %>
+      <%= f.text_field :phone %>
+    </li>
+  </ol>
+  
+  <p class="separator">
+    <%= f.submit "Submit" %> |
+    <%= link_to "Cancel", root_url %>
+  </p>
+
+<% end %>

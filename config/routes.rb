@@ -34,6 +34,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "home"
   
   map.resources :loan_applications, :only => [:new, :create]
+  map.resources :disclosure_forms,  :only => [:new, :create]
   map.resource  :signing_session
 
   # See how all your routes lay out with "rake routes"
