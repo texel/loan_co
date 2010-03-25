@@ -9,7 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100321204006) do
+ActiveRecord::Schema.define(:version => 20100325050547) do
+
+  create_table "disclosure_forms", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "phone"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "loan_applications", :force => true do |t|
     t.string   "full_name"

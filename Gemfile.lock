@@ -1,0 +1,63 @@
+--- 
+dependencies: 
+  soap4r: 
+    group: 
+    - :default
+    version: ">= 0"
+  sqlite3-ruby: 
+    group: 
+    - :default
+    version: ">= 0"
+  mysql: 
+    group: 
+    - :default
+    version: ">= 0"
+  rspec: 
+    group: 
+    - :test
+    version: ">= 1.2.9"
+  rack: 
+    group: 
+    - :default
+    version: = 1.0.1
+  rspec-rails: 
+    group: 
+    - :test
+    version: ">= 0"
+  factory_girl: 
+    group: 
+    - :test
+    version: ">= 0"
+  docusign: 
+    group: 
+    - :default
+    version: ">= 0.5.2"
+  i18n: 
+    group: 
+    - :default
+    version: ">= 0"
+specs: 
+- docusign: 
+    version: 0.5.3
+- factory_girl: 
+    version: 1.2.3
+- httpclient: 
+    version: 2.1.5.2
+- i18n: 
+    version: 0.3.6
+- mysql: 
+    version: 2.8.1
+- rack: 
+    version: 1.0.1
+- rspec: 
+    version: 1.3.0
+- rspec-rails: 
+    version: 1.3.2
+- soap4r: 
+    version: 1.5.8
+- sqlite3-ruby: 
+    version: 1.2.5
+hash: 908cac36dff09bdb6b312e1723cb524e811b3f18
+sources: 
+- Rubygems: 
+    uri: http://gemcutter.org

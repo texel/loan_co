@@ -1,7 +1,8 @@
 # A sample Gemfile
 source :gemcutter
 #
-gem "rails"
+gem 'i18n'
+gem 'rack', '1.0.1'
 gem 'sqlite3-ruby'
 gem 'mysql'
 gem 'soap4r'
