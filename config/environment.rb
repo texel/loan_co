@@ -6,23 +6,9 @@ RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
-# This app uses Bundler, the new hotness for managing Ruby gem dependencies
-begin
-  # Try to require the preresolved locked set of gems.
-  require File.expand_path('../.bundle/environment', __FILE__)
-rescue LoadError
-  # Fall back on doing an unlocked resolve at runtime.
-  require "rubygems"
-  require "bundler"
-  Bundler.setup
-end
-
 # Your application's requires come here, e.g.
 # require 'date' # a ruby standard library
 # require 'rack' # a bundled gem
-
-# Alternatively, you can require all the bundled libs at once
-Bundler.require(:default)
 
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
