@@ -1,155 +1,157 @@
-* { 
-	margin: 0;
-	padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-a { 
-	outline: none;
-	color: 1085c7;
+a {
+  outline: none;
+  color: 1085c7;
 }
 
-h1, h2, h3, h4, h5, h6, input, select, textarea { 
-	font-size: 100%;
+h1, h2, h3, h4, h5, h6, input, select, textarea {
+  font-size: 100%;
 }
 
 body {
-	font: normal 62.5% 'Helvetica Neue', Helvetica, Arial, sans-serif; /* normalize font size across browsers */
-	line-height: 18px;	
+  font: normal 62.5% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/* normalize font size across browsers */
+  line-height: 18px;
 }
 
 #wrapper {
-	overflow: hidden;
-	min-width: 600px;
+  overflow: hidden;
+  min-width: 600px;
 }
 
 #header {
-	overflow: hidden;
-	background-color: #e4a300;
-	height: 30px;
-	width: 100%;
-	padding: 30px 0 15px 20px;
+  overflow: hidden;
+  background-color: #e4a300;
+  height: 30px;
+  width: 100%;
+  padding: 30px 0 15px 20px;
 }
 
 #header p {
-	font-size: 2em;
-	color: #FFF;
+  font-size: 2em;
+  color: #FFF;
 }
 
 #top_menu {
-	overflow: hidden;
-	background-color: #1085c7;
-	width: 100%;
+  overflow: hidden;
+  background-color: #1085c7;
+  width: 100%;
 }
 
 #user_bar {
-	float: right;
-	color: #FFF;
-	font-size: 1.2em;
-	margin-right: 30px;
-	padding-bottom: 10px;
+  float: right;
+  color: #FFF;
+  font-size: 1.2em;
+  margin-right: 30px;
+  padding-bottom: 10px;
 }
 
 #user_bar a {
-	color: #d9e3ef;
-	text-decoration: underline;
+  color: #d9e3ef;
+  text-decoration: underline;
 }
 
 #top_menu {
-	padding-left: 10px;
+  padding-left: 10px;
 }
 
 #top_menu ul li {
-	float: left;
-	list-style: none;
-	padding: 3px 5px 3px 5px;
-	margin: 0 0 0 10px;
-	background-color: #d9e3ef;
-	font-weight: bold;
+  float: left;
+  list-style: none;
+  padding: 3px 5px 3px 5px;
+  margin: 0 0 0 10px;
+  background-color: #d9e3ef;
+  font-weight: bold;
 }
 
 #top_menu li.selected {
-	background-color: white;
+  background-color: white;
 }
 
 #content {
-	float: left;
-	margin: 15px 10px 0 20px;
+  float: left;
+  margin: 15px 10px 0 20px;
 }
 
 h1 {
-	font-size: 2.5em;
-	margin-bottom: 15px;
+  font-size: 2.5em;
+  margin-bottom: 15px;
 }
 
 h2 {
-	font-size: 2em;
-	line-height: 3em;
+  font-size: 2em;
+  line-height: 3em;
 }
 
 p, li {
-	font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 p {
-  	margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 #login_wrapper {
-	float: left;
-	padding: 10px;
-	margin: 50px 0 0 30px;
-	border-style: solid;
-	border-color: #1085c7;
+  float: left;
+  padding: 10px;
+  margin: 50px 0 0 30px;
+  border-style: solid;
+  border-color: #1085c7;
 }
 
 p.flash {
-	border-style: solid;
-	border-width: 3px;
-	margin-bottom: 15px;
-	padding: 5px;
+  border-style: solid;
+  border-width: 3px;
+  margin-bottom: 15px;
+  padding: 5px;
 }
 
 .error {
-	border-color: red;
+  border-color: red;
 }
 
-.notice	{
-	border-color: lime;
+.notice {
+  border-color: lime;
 }
 
-.info	{
-	border-color: #1085c7;
+.info {
+  border-color: #1085c7;
 }
 
 table {
-	border: 1px solid #1085c7;
+  border: 1px solid #1085c7;
 }
 
 thead tr {
-	background-color: #1085c7;
+  background-color: #1085c7;
 }
 
 th {
-	border: 0;
-	margin: 0;
-	padding: 5px 10px 5px 5px;
-	font-size: 1.2em;
-	color: white;
-	text-align: left;
+  border: 0;
+  margin: 0;
+  padding: 5px 10px 5px 5px;
+  font-size: 1.2em;
+  color: white;
+  text-align: left;
 }
 
 td {
-	border: 0;
-	padding: 5px 10px 5px 5px;
-	font-size: 1.2em;
+  border: 0;
+  padding: 5px 10px 5px 5px;
+  font-size: 1.2em;
 }
 
 hr {
-	clear: both;
-	height: 1px;
-	margin-bottom: 17px;
-	border: 0;
-	border-bottom: 1px solid #ddd;
+  clear: both;
+  height: 1px;
+  margin-bottom: 17px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
 }
 
 .separator {
@@ -158,6 +160,7 @@ hr {
 }
 
 /* home */
+
 ul.home_menu {
   list-style: none;
 }
@@ -170,7 +173,7 @@ form ol {
 }
 
 form p {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 form li {
@@ -182,6 +185,7 @@ form label {
 }
 
 /* Errors */
+
 .errorExplanation {
   border: 1px solid #f00;
   padding: 10px;
@@ -194,7 +198,7 @@ form label {
 }
 
 .errorExplanation ul {
-	margin-left: 2em;
+  margin-left: 2em;
 }
 
 .fieldWithErrors input {
