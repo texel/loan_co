@@ -31,14 +31,14 @@ dependencies:
   docusign: 
     group: 
     - :default
-    version: ">= 0.5.2"
+    version: = 0.5.4
   i18n: 
     group: 
     - :default
     version: ">= 0"
 specs: 
 - docusign: 
-    version: 0.5.3
+    version: 0.5.4
 - factory_girl: 
     version: 1.2.3
 - httpclient: 
@@ -57,7 +57,7 @@ specs:
     version: 1.5.8
 - sqlite3-ruby: 
     version: 1.2.5
-hash: 908cac36dff09bdb6b312e1723cb524e811b3f18
+hash: f5819350bbee9820804b01de39104242e0728eec
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
       # Set all the callback URLs in one fell swoop..
       t.client_urls = Docusign::RequestRecipientTokenClientURLs.new.tap do |u|
         Docusign::RequestRecipientTokenClientURLs::CALLBACKS.each do |result|
+          # Example: u.on_signing_complete = signing_session_url(:status => 'signing_complete')
           u.send "on_#{result}=", signing_session_url(:status => result)
         end
       end

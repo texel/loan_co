@@ -6,7 +6,7 @@ gem 'rack', '1.0.1'
 gem 'sqlite3-ruby'
 gem 'mysql'
 gem 'soap4r'
-gem 'docusign', '>=0.5.2'
+gem 'docusign', '0.5.4'
 
 group :test do
 	gem 'rspec', '>=1.2.9'

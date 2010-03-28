@@ -1,5 +1,3 @@
-require 'pp'
-
 class LoanApplicationsController < ApplicationController
   def new; end
   
