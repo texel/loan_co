@@ -9,9 +9,9 @@
 * docusign.yml is read in config/initializers/docusign.rb
 * lib/loan_co.rb contains the LoanCo module. This is used throughout the application
   to store a connection to the Docusign API.
-* the Docusign gem contains some convenient features which make calling the Docusign API
+* the docusign gem contains some convenient features which make calling the Docusign API
   much more Ruby-like. You can see these in action throughout this application.
-  Refer to the Docusign gem RDoc for more information
+  Refer to the docusign gem documentation (http://github.com/texel/docusign) for more information
 
 == Copyright (C) DocuSign, Inc. All rights reserved.
 
