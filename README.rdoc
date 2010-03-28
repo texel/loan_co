@@ -1,8 +1,9 @@
 == Setup
 
-1. bundle install
-2. Rename config/docusign.example.yml => docusign.yml and, if necessary, change the endpoint urls.
-3. rake db:migrate
+1. gem install bundler
+2. bundle install
+3. Rename config/docusign.example.yml => docusign.yml and, if necessary, change the endpoint urls.
+4. rake db:migrate
 
 == Items of interest
 
