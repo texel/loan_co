@@ -1,9 +1,11 @@
 == Setup
-1) bundle install
-2) Rename config/docusign.example.yml => docusign.yml and, if necessary, change the endpoint urls.
-3) rake db:migrate
+
+1. bundle install
+2. Rename config/docusign.example.yml => docusign.yml and, if necessary, change the endpoint urls.
+3. rake db:migrate
 
 == Items of interest
+
 * docusign.yml is read in config/initializers/docusign.rb
 * lib/loan_co.rb contains the LoanCo module. This is used throughout the application
   to store a connection to the Docusign API.
