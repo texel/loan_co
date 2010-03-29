@@ -1,7 +1,9 @@
 <h2>Signing Result</h2>
 <p><%= @status_message %></p>
 
-<p><%= link_to "Download PDF", pdf_path %></p>
+<% if params[:status] == 'signing_complete' %>
+  <p><%= link_to "Download PDF", pdf_path %></p>
+<% end %>
 
 <p class="separator">
   <%= link_to 'Back', root_path %>
