@@ -1,6 +1,7 @@
 # A sample Gemfile
 source :gemcutter
 #
+gem 'rake'
 gem 'i18n'
 gem 'rack', '1.0.1'
 gem 'sqlite3-ruby'
