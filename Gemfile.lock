@@ -8,6 +8,10 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  rake: 
+    group: 
+    - :default
+    version: ">= 0"
   mysql: 
     group: 
     - :default
@@ -37,6 +41,8 @@ dependencies:
     - :default
     version: ">= 0"
 specs: 
+- rake: 
+    version: 0.8.7
 - docusign: 
     version: 0.5.4
 - factory_girl: 
@@ -57,7 +63,7 @@ specs:
     version: 1.5.8
 - sqlite3-ruby: 
     version: 1.2.5
-hash: f5819350bbee9820804b01de39104242e0728eec
+hash: 01bcc4c7d331d78caa8007fedb46c249535261e0
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
