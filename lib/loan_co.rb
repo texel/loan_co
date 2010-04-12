@@ -19,7 +19,7 @@ module LoanCo
       :user_name    => Docusign::Config[:user_name],
       :password     => Docusign::Config[:password],
       :endpoint_url => Docusign::Config[:default_endpoint_url],
-      :wiredump_dev => STDOUT
+      :wiredump_dev => Docusign::Config[:debug] ? STDOUT : nil
     )
   end
   
